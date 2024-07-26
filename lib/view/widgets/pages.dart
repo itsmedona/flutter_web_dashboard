@@ -1,12 +1,10 @@
+import '../screens/payroll_screen/payroll_processing_date.dart';
 import 'routes.dart';
 import 'package:get/get.dart';
-import 'package:web_application/view/screens/payroll_screen/holiday_list.dart';
 import 'package:web_application/view/screens/payroll_screen/max_leave_allotted.dart';
 import 'package:web_application/view/screens/payroll_screen/processing_date.dart';
 import 'package:web_application/view/screens/login_screen/login.dart';
 import 'package:web_application/view/screens/employee_screen/employee_list.dart';
-import 'package:web_application/view/screens/payroll_screen/payroll_list.dart';
-import 'package:web_application/view/screens/payroll_screen/payroll_processing.dart';
 import 'package:web_application/view/screens/settings_screen/add_department.dart';
 import 'package:web_application/view/screens/settings_screen/add_designation.dart';
 import 'package:web_application/view/screens/settings_screen/add_emp_category.dart';
@@ -110,21 +108,13 @@ class GetPages {
         transition: Transition.noTransition
         ),
     //////Payroll Submenus//////
-    GetPage(
-      name: Routes.PayrollListAll,
-      page: () => PayrollList(),
-      transition: Transition.noTransition,
-    ),
+
     GetPage(
         name: Routes.PayProcessDate,
         page: () => PayrollProcessingDate(),
         transition: Transition.noTransition
         ),
-    GetPage(
-        name: Routes.PayrollHolidayList,
-        page: () => HolidayList(),
-        transition: Transition.noTransition
-        ),
+   
     GetPage(
         name: Routes.PayrollMaxleaveallowed,
         page: () => MaxLeaveAllotted(),
