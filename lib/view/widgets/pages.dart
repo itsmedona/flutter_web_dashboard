@@ -1,9 +1,7 @@
-import '../screens/payroll_screen/payroll_processing_date.dart';
 import 'routes.dart';
 import 'package:get/get.dart';
-import 'package:web_application/view/screens/payroll_screen/max_leave_allotted.dart';
-import 'package:web_application/view/screens/payroll_screen/processing_date.dart';
 import 'package:web_application/view/screens/login_screen/login.dart';
+import 'package:web_application/view/screens/payroll_screen/payroll_processing_date.dart';
 import 'package:web_application/view/screens/employee_screen/employee_list.dart';
 import 'package:web_application/view/screens/settings_screen/add_department.dart';
 import 'package:web_application/view/screens/settings_screen/add_designation.dart';
@@ -34,58 +32,48 @@ class GetPages {
     GetPage(
         name: Routes.PROFILE,
         page: () => ProfileSection(),
-        transition: Transition.noTransition
-        ),
+        transition: Transition.noTransition),
 
     /////Company Sub Menus///////
     GetPage(
         name: Routes.ComLISTALL,
         page: () => CompanyList(),
-        transition: Transition.noTransition
-        ),
+        transition: Transition.noTransition),
     GetPage(
         name: Routes.AddComp,
         page: () => AddCompany(),
-        transition: Transition.noTransition
-        ),
+        transition: Transition.noTransition),
 
     /////Settings Sub menus/////////
     GetPage(
         name: Routes.IndustryList,
         page: () => IndustryList(),
-        transition: Transition.noTransition
-        ),
+        transition: Transition.noTransition),
     GetPage(
         name: Routes.AddInd,
         page: () => AddIndustry(),
-        transition: Transition.noTransition
-        ),
+        transition: Transition.noTransition),
     GetPage(
         name: Routes.DepartmentList,
         page: () => DepartmentList(),
-        transition: Transition.noTransition
-        ),
+        transition: Transition.noTransition),
     GetPage(
         name: Routes.AddDep,
         page: () => AddDepartment(),
-        transition: Transition.noTransition
-        ),
+        transition: Transition.noTransition),
     GetPage(
         name: Routes.DesignationList,
         page: () => DesignationList(),
-        transition: Transition.noTransition
-        ),
+        transition: Transition.noTransition),
     GetPage(
         name: Routes.AddDesign,
         page: () => AddDesignation(),
-        transition: Transition.noTransition
-        ),
+        transition: Transition.noTransition),
 //////Employee Sub menus/////
     GetPage(
         name: Routes.EmpList,
         page: () => EmployeeList(),
-        transition: Transition.noTransition
-        ),
+        transition: Transition.noTransition),
     GetPage(
       name: Routes.EmpMenu,
       page: () => EmployeeMenu(),
@@ -94,8 +82,7 @@ class GetPages {
     GetPage(
         name: Routes.AddEmp,
         page: () => AddEmployee(),
-        transition: Transition.noTransition
-        ),
+        transition: Transition.noTransition),
 
     GetPage(
       name: Routes.EmpCategoryList,
@@ -105,25 +92,12 @@ class GetPages {
     GetPage(
         name: Routes.AddEmpCat,
         page: () => AddEmpCategory(),
-        transition: Transition.noTransition
-        ),
+        transition: Transition.noTransition),
     //////Payroll Submenus//////
 
     GetPage(
         name: Routes.PayProcessDate,
         page: () => PayrollProcessingDate(),
-        transition: Transition.noTransition
-        ),
-   
-    GetPage(
-        name: Routes.PayrollMaxleaveallowed,
-        page: () => MaxLeaveAllotted(),
-        transition: Transition.noTransition
-        ),
-    GetPage(
-        name: Routes.PayrollProcessingDate,
-        page: () => ProcessingDate(),
-        transition: Transition.noTransition
-        ),
+        transition: Transition.noTransition),
   ];
 }
