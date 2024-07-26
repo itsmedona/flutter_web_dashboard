@@ -29,11 +29,12 @@ class Routes {
   static const String EmpMenu = '/employeemenu';
 
 //Related to Payroll
-  static const String PayList = '/payrolllist';
-  static const String PayProcess = '/payrollprocessing';
-  static const String ProcessDate = '/processingdate';
+  static const String AllowanceList = '/allowancelist';
+  static const String DeductionList = '/deductionlist';
+  static const String CompPayAllo = '/companypayallowance';
+  static const String CompPayDed = '/companypaydeduction';
+  static const String PayProcessDate = '/payrollprocessingdate';
   static const String MaxLeaveAllowed = '/maximumleaveallowed';
-  static const String HolidayList = '/holidaylist';
 
   static const String COMPANYMODULE = '/companymodule';
   static const String COMPANYLEAVETYPE = '/companyleavetype';

@@ -116,8 +116,8 @@ class GetPages {
       transition: Transition.noTransition,
     ),
     GetPage(
-        name: Routes.PayProcess,
-        page: () => PayrollProcessing(),
+        name: Routes.PayProcessDate,
+        page: () => PayrollProcessingDate(),
         transition: Transition.noTransition
         ),
     GetPage(

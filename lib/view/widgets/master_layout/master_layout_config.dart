@@ -50,11 +50,6 @@ final sidebarMenuConfigs = [
           icon: Icons.circle_outlined,
           title: (context) => 'Employee list',
         ),
-        SidebarChildMenuConfig(
-          uri: Routes.EmpMenu,
-          icon: Icons.circle_outlined,
-          title: (context) => 'Employee Menu',
-        ),
       ]),
   SidebarMenuConfig(
     uri: '',
@@ -62,29 +57,34 @@ final sidebarMenuConfigs = [
     title: (context) => 'Payroll',
     children: [
       SidebarChildMenuConfig(
-        uri: Routes.PayrollListAll,
+        uri: Routes.AllowanceList,
         icon: Icons.circle_outlined,
-        title: (context) => 'List All',
+        title: (context) => 'Allowance List',
       ),
       SidebarChildMenuConfig(
-        uri: Routes.PayProcess,
+        uri: Routes.DeductionList,
         icon: Icons.circle_outlined,
-        title: (context) => 'Payroll Processing',
+        title: (context) => 'Deduction List',
       ),
       SidebarChildMenuConfig(
-        uri: Routes.PayrollProcessingDate,
+        uri: Routes.CompPayAllo,
         icon: Icons.circle_outlined,
-        title: (context) => 'Processing Date',
+        title: (context) => 'Company Payroll Allowance',
+      ),
+      SidebarChildMenuConfig(
+        uri: Routes.CompPayDed,
+        icon: Icons.circle_outlined,
+        title: (context) => 'Company Payroll Deduction',
+      ),
+      SidebarChildMenuConfig(
+        uri: Routes.PayProcessDate,
+        icon: Icons.circle_outlined,
+        title: (context) => 'Payroll Processing Date',
       ),
       SidebarChildMenuConfig(
         uri: Routes.PayrollMaxleaveallowed,
         icon: Icons.circle_outlined,
         title: (context) => 'Max Leave Allowed',
-      ),
-      SidebarChildMenuConfig(
-        uri: Routes.PayrollHolidayList,
-        icon: Icons.circle_outlined,
-        title: (context) => 'Holiday List',
       ),
     ],
   ),
