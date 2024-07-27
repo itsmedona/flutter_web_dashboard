@@ -7,8 +7,8 @@ import 'package:web_application/view/widgets/master_layout/master_layout.dart';
 import 'package:web_application/view/widgets/sized_box.dart';
 import 'package:web_application/view/widgets/ui_components_widgets/ui_components_appbar.dart';
 
-class PayrollProcessingDate extends StatelessWidget {
-   PayrollProcessingDate({super.key});
+class DeductionList extends StatelessWidget {
+  DeductionList({super.key});
   final _dataTableHorizontalScrollController = ScrollController();
   @override
   Widget build(BuildContext context) {
@@ -17,26 +17,25 @@ class PayrollProcessingDate extends StatelessWidget {
             child: ListView(
       children: [
         Padding(
-          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 12),
-          child: Container(
-            child: UIComponenetsAppBar(
-              title: 'Payroll Processing Date',
-              subtitle: '',
-              icon: Icon(Icons.rocket),
-              buttonTitle: 'Add Processing Date',
-              onClick: () {
-                //Get.toNamed(Routes.AddDesign);
-              },
-            ),
-          decoration: BoxDecoration(boxShadow: [
-                  BoxShadow(
-                    color: AppColors.blackColor.withOpacity(0.1),
-                    spreadRadius: 5,
-                    blurRadius: 7,
-                  ),
-                ]),
-          ),
-        ),
+            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 12),
+            child: Container(
+              child: UIComponenetsAppBar(
+                title: 'Deduction List',
+                subtitle: '',
+                icon: Icon(Icons.rocket),
+                buttonTitle: 'Add Deduction',
+                onClick: () {
+                  //Get.toNamed(Routes.AddDed);
+                },
+              ),
+              decoration: BoxDecoration(boxShadow: [
+                BoxShadow(
+                  color: AppColors.blackColor.withOpacity(0.1),
+                  spreadRadius: 5,
+                  blurRadius: 7,
+                ),
+              ]),
+            )),
         buildSizedBoxH(kDefaultPadding),
         Padding(
             padding: EdgeInsets.only(
@@ -65,7 +64,12 @@ class PayrollProcessingDate extends StatelessWidget {
                               child: SizedBox(
                                 width: dataTableWidth,
                                 child: DataTable(
-                                  border: TableBorder.all(width: 0.5),
+                                  border: TableBorder(
+                                      verticalInside: BorderSide(width: 0.5),
+                                      top: BorderSide(width: 0.5),
+                                      right: BorderSide(width: 0.5),
+                                      left: BorderSide(width: 0.5),
+                                      bottom: BorderSide(width: 0.5)),
                                   dividerThickness: 2,
                                   sortColumnIndex: 0,
                                   sortAscending: true,
@@ -73,40 +77,48 @@ class PayrollProcessingDate extends StatelessWidget {
                                   showBottomBorder: true,
                                   columns: [
                                     DataColumn(
+                                        // numeric: true,
                                         label: Row(
                                       children: [
                                         Text('#'),
+
+                                        //  IconButton(
+                                        //      onPressed: () {},
+                                        //      icon: Icon(Icons.arrow_drop_down ))
                                       ],
                                     )),
                                     DataColumn(
                                         label: Row(
                                       children: [
-                                        Text('Company ID'),
+                                        Text('Deduction'),
+                                        //  IconButton(
+                                        //      onPressed: () {},
+                                        //      icon: Icon(Icons.arrow_drop_down_sharp))
                                       ],
                                     )),
                                     DataColumn(
                                         label: Row(
                                       children: [
-                                        Text('Processing Date'),
-                                      ],
-                                    )),
-                                   
-                                    DataColumn(
-                                        label: Row(
-                                      children: [
-                                        Text('Remarks'),
+                                        Text('Status'),
+                                        //  IconButton(
+                                        //      onPressed: () {},
+                                        //      icon: Icon(Icons.arrow_drop_down_sharp))
                                       ],
                                     )),
                                   ],
-                                  rows: List.generate(4, (index) {
+                                  rows: List.generate(5, (index) {
                                     return DataRow.byIndex(
                                       index: index,
                                       cells: [
                                         DataCell(Text('#${index + 1}')),
-                                        DataCell(Text('Id ${index + 1}')),
-                                        DataCell(
-                                            Text('06/04/202${index + 1}')),
-                                        DataCell(Text('Active')),
+                                        const DataCell(Text('2022-06-30')),
+                                        DataCell(Text('Industry ${index + 1}')),
+                                        // DataCell(Text(
+                                        //     '${Random().nextInt(50)}')),
+                                        // DataCell(Text(
+                                        //     '${Random().nextInt(100)}')),
+                                        // DataCell(Text(
+                                        //     '${Random().nextInt(10000)}')),
                                       ],
                                     );
                                   }),
@@ -125,3 +137,4 @@ class PayrollProcessingDate extends StatelessWidget {
     )));
   }
 }
+

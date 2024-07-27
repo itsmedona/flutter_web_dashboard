@@ -34,7 +34,7 @@ class Routes {
   static const String CompPayAllo = '/companypayallowance';
   static const String CompPayDed = '/companypaydeduction';
   static const String PayProcessDate = '/payrollprocessingdate';
-  static const String MaxLeaveAllowed = '/maximumleaveallowed';
+  static const String MaxLeaveAllow = '/maxleaveallowed';
 
   static const String COMPANYMODULE = '/companymodule';
   static const String COMPANYLEAVETYPE = '/companyleavetype';

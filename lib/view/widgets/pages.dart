@@ -1,5 +1,12 @@
+import 'package:flutter/material.dart';
+import 'package:web_application/view/screens/payroll_screen/company_payroll_allow.dart';
+import 'package:web_application/view/screens/payroll_screen/company_payroll_ded.dart';
+
 import 'routes.dart';
 import 'package:get/get.dart';
+import 'package:web_application/view/screens/payroll_screen/allowance_list.dart';
+import 'package:web_application/view/screens/payroll_screen/deduction_list.dart';
+import 'package:web_application/view/screens/payroll_screen/max_leave_allotted.dart';
 import 'package:web_application/view/screens/login_screen/login.dart';
 import 'package:web_application/view/screens/payroll_screen/payroll_processing_date.dart';
 import 'package:web_application/view/screens/employee_screen/employee_list.dart';
@@ -98,6 +105,26 @@ class GetPages {
     GetPage(
         name: Routes.PayProcessDate,
         page: () => PayrollProcessingDate(),
+        transition: Transition.noTransition),
+    GetPage(
+        name: Routes.AllowanceList,
+        page: () => AllowanceList(),
+        transition: Transition.noTransition),
+    GetPage(
+        name: Routes.DeductionList,
+        page: () => DeductionList(),
+        transition: Transition.noTransition),
+    GetPage(
+        name: Routes.MaxLeaveAllow,
+        page: () => MaxLeaveAllowed(),
+        transition: Transition.noTransition),
+    GetPage(
+        name: Routes.CompPayAllo,
+        page: () => CompanyPayrollAllowance(),
+        transition: Transition.noTransition),
+    GetPage(
+        name: Routes.CompPayDed,
+        page: () => CompanyPayrollDeduction(),
         transition: Transition.noTransition),
   ];
 }

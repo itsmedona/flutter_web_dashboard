@@ -7,8 +7,8 @@ import 'package:web_application/view/widgets/master_layout/master_layout.dart';
 import 'package:web_application/view/widgets/sized_box.dart';
 import 'package:web_application/view/widgets/ui_components_widgets/ui_components_appbar.dart';
 
-class PayrollProcessingDate extends StatelessWidget {
-   PayrollProcessingDate({super.key});
+class CompanyPayrollAllowance extends StatelessWidget {
+   CompanyPayrollAllowance({super.key});
   final _dataTableHorizontalScrollController = ScrollController();
   @override
   Widget build(BuildContext context) {
@@ -20,10 +20,10 @@ class PayrollProcessingDate extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 12),
           child: Container(
             child: UIComponenetsAppBar(
-              title: 'Payroll Processing Date',
+              title: 'Company Payroll Allowance',
               subtitle: '',
               icon: Icon(Icons.rocket),
-              buttonTitle: 'Add Processing Date',
+              buttonTitle: 'Add Payroll Allowance',
               onClick: () {
                 //Get.toNamed(Routes.AddDesign);
               },
@@ -87,7 +87,7 @@ class PayrollProcessingDate extends StatelessWidget {
                                     DataColumn(
                                         label: Row(
                                       children: [
-                                        Text('Processing Date'),
+                                        Text('Payroll Allowance ID'),
                                       ],
                                     )),
                                    
