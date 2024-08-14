@@ -2,11 +2,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get/get.dart';
-import 'package:web_application/generated/l10n.dart';
-import 'package:web_application/view/screens/login_screen/login.dart';
-//import 'package:web_application/view/widgets/environment.dart';
-import 'package:web_application/view/widgets/pages.dart';
-import 'package:web_application/view/widgets/routes.dart';
+import 'package:web_application/core/generated/l10n.dart';
+import 'package:web_application/routes/routes.dart';
+import 'package:web_application/screens/login_screen/login_screen.dart';
+
 
 void main() {
   //Environment.init();
@@ -29,6 +28,6 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         home: LoginScreen(),
         initialRoute: Routes.LOGIN,
-        getPages: GetPages.routes);
+      );
   }
 }
